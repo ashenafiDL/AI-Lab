@@ -1,4 +1,5 @@
 import re
+import os
 
 
 def clean_text():
@@ -6,10 +7,11 @@ def clean_text():
     :return: A list of words
     """
     words = []
-    with open("../file.txt", "r") as f:
+    with open(os.path.dirname(__file__) + "/../file.txt", mode="r", encoding="utf-8") as f:
         for line in f:
             for word in line.split():
-                word = re.sub(r"\W", "", word)  # remove non-alphanumeric characters
+                # remove non-alphanumeric characters
+                word = re.sub(r"\W", "", word)
                 word = re.sub(r"\d", "", word)  # remove numeric characters
                 words.append(word.lower())
     return words

@@ -1,0 +1,17 @@
+### PyCharm
+
+.idea/\*
+
+### Python
+
+**pycache**/
+_.py[cod]
+_$py.class
+
+### venv
+
+.venv
+
+### VisualStudioCode
+
+.vscode/\*
