@@ -3,8 +3,7 @@ words = clean_text()
 
 # Returns the frequency of words by decreasing order.
 def word_frequency():
-    """ 
-        dictionary = {'word':'amount'}
+    """ dictionary = {'word':'amount'}
         'word': stands for all specific words in the list.
         'amount': total amount of the word, for all unique words in the list.
     """
