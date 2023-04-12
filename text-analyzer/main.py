@@ -6,34 +6,39 @@ from clean_text import clean_text
 
 
 def menu():
-    print("1. Word Frequency")
-    print("2. Character Frequency")
-    print("3. Statistical Information")
-
     choice = None
 
-    try:
-        choice = int(input("\nEnter your choice: "))
-    except (TypeError, ValueError):
-        print("Invalid choice")
-        menu()
+    while choice != 0:
+        print("1. Word Frequency")
+        print("2. Character Frequency")
+        print("3. Statistical Information")
 
-    match choice:
-        case 1:
-            word_frequency() 
-        case 2:
-            # character_frequency()
-            pass
-        case 3:
-            # statistical_information()
-            pass
-        case _:
+        try:
+            choice = int(input("\nEnter your choice: "))
+        except (TypeError, ValueError):
             print("Invalid choice")
             menu()
+
+        match choice:
+            case 1:
+                word_frequency()
+            case 2:
+                # character_frequency()
+                pass
+            case 3:
+                # statistical_information()
+                pass
+            case 0:
+                exit()
+            case _:
+                print("Invalid choice")
+                menu()
 
 
 if __name__ == "__main__":
     print("====================================")
     print("Welcome to the text analyzer program")
     print("====================================")
-    menu()
+
+    while True:
+        menu()
