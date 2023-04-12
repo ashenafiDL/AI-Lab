@@ -1,12 +1,13 @@
 from clean_text import clean_text
 words = clean_text()
-def word_frequency():
 
-    '''
+# Returns the frequency of words by decreasing order.
+def word_frequency():
+    """ 
         dictionary = {'word':'amount'}
         'word': stands for all specific words in the list.
         'amount': total amount of the word, for all unique words in the list.
-    '''
+    """
     dictionary = {} 
 
     # take one word per iteration
