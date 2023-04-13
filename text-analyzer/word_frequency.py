@@ -32,14 +32,18 @@ def word_frequency():
     sortedDictionary = dict(sorted(dictionary.items(), key=lambda w: w[1], reverse=True))
 
     count = 0
+    num =0
     print('{:<20} {:<20}'.format("WORDS", "AMOUNT")) # title for displaying the dictionary
     for word, amount in sortedDictionary.items():
+        num += 1
+        word = str(num)+". "+word
         if top == 1:   # if user choosed 1, always this case will be excuted.
             print('{:<20} {:<20}'.format(word, amount))
         else:
-            if count > top:  # if user choosed other than 1 words upto his choice will be displayed.
+            if count > top-1:  # if user choosed other than 1 words upto his choice will be displayed.
                 break
             print('{:<20} {:<20}'.format(word, amount))
             count += 1
+    print()
 
     
