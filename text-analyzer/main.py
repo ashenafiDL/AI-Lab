@@ -3,6 +3,7 @@ prints out the number of words, characters, and lines of text
 """
 from word_frequency import word_frequency
 from clean_text import clean_text
+from character_frequency import character_frequency
 
 
 def menu():
@@ -23,8 +24,7 @@ def menu():
             case 1:
                 word_frequency()
             case 2:
-                # character_frequency()
-                pass
+                character_frequency()
             case 3:
                 # statistical_information()
                 pass
