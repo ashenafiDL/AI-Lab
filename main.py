@@ -7,3 +7,4 @@ if __name__ == "__main__":
 # Print the frequency count for each character
     for char, count in freq.items():
         print(f"{count} {char}'s")
+
