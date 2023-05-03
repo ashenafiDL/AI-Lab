@@ -3,12 +3,12 @@ from clean_text import clean_text  # import clean_text
 top = 0
 # Returns the frequency of words by decreasing order.
 def word_frequency():
-    print("Enter 1 for all word frequencys ranks or top of you want")
+    print("Enter 0 for all word frequencys ranks or top of you want")
     try: 
         top = int(input("Top of: "))
     except (Exception):
         print("Invalid choice")
-        print("Enter 1 for all word frequencys ranks or top of you want")
+        print("Enter 0 for all word frequencys ranks or top of you want")
 
     """ dictionary = {'word':'amount'}
         'word': stands for all specific words in the list.
@@ -37,10 +37,11 @@ def word_frequency():
     for word, amount in sortedDictionary.items():
         num += 1
         word = str(num)+". "+word
-        if top == 1:   # if user choosed 1, always this case will be excuted.
+        if top == 0:   # if user choosed 0, always this case will be excuted, means all data will be displayed.
             print('{:<20} {:<20}'.format(word, amount))
         else:
-            if count > top-1:  # if user choosed other than 1 words upto his choice will be displayed.
+            if count > top-1:  # if user choosed other than 0, words upto his choice will be displayed.
+                               # eg. if you entered 5, you will see top 5 frequent word. 
                 break
             print('{:<20} {:<20}'.format(word, amount))
             count += 1
